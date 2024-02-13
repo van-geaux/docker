@@ -60,6 +60,23 @@ A container is a standard unit of software that packages up code and all its dep
    sudo apt-get install docker-ce docker-ce-cli containerd.io
    ```
 
+
+### Install Docker Compose
+
+1. Install `Python` and `pip` package manager to install `Docker Compose`
+
+   ```bash
+   sudo apt install -y python3 python3-pip
+   ```
+
+
+2. Install `Docker Compose`
+
+   ```bash
+   sudo pip3 install docker-compose
+   ```
+
+
 ### Create Docker user
 
 1. Create a new user i.e. `vangeaux`

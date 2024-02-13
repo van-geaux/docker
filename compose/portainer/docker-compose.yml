@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  portainer-ce:
+    ports:
+      - ${SSH_PORT_FOR_AGENT}:8000 # you can comment it out if you don't use portainer agent
+      - ${HTTP_PORT}:9000
+      - ${HTTPS_PORT}:9443 # you can comment it out and portainer will still work
+    container_name: portainer
+    restart: on-failure:5
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${PORTAINER_DATA_PATH}:/data
+    image: portainer/portainer-ce
+
+# comment these out if you want default bridge or edit if you use different setting
+networks:
+  default:
+    name: proxy.bridge
+    external: true
