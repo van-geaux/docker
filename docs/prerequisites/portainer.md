@@ -3,7 +3,7 @@
 Portainer Community Edition is a lightweight service delivery platform for containerized applications that can be used to manage Docker, Swarm, Kubernetes and ACI environments. It is designed to be as simple to deploy as it is to use.[^1]
 
 
-# Version used
+# Version used in this documentation
 
 > There can be slight differences on installation processes if you are on different versions or hardware
 
@@ -18,7 +18,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 
 
 # Prerequisites
-* [Docker](install-docker.md)
+* [Docker](docker.md)
 
 # Environments in the examples
 
@@ -89,9 +89,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
    sudo nano /volume1/docker/portainer/docker-compose.yml
    ```
 
-
 3. Fill the file with these:
-
    
    > Change every `${}` to your values
 
@@ -100,9 +98,9 @@ Portainer Community Edition is a lightweight service delivery platform for conta
    services:
      portainer-ce:
        ports:
-         - ${SSH_PORT_FOR_AGENT}:8000 # you can comment it out if you don't use portainer agent
+         - ${SSH_PORT_FOR_AGENT}:8000 # you can delete this entire line if you don't use portainer agent
          - ${HTTP_PORT}:9000
-         - ${HTTPS_PORT}:9443 # you can comment it out and portainer will still work
+         - ${HTTPS_PORT}:9443 # you can delete this entire line and portainer will still work
        container_name: portainer
        restart: on-failure:5
        volumes:
@@ -110,7 +108,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
          - ${PORTAINER_DATA_PATH}:/data
        image: portainer/portainer-ce
 
-   # comment these out if you want default bridge or edit if you use different setting
+   # delete everything below if you want default bridge or edit them if you want to use different setting
    networks:
      default:
        name: proxy.bridge

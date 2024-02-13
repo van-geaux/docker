@@ -22,12 +22,34 @@ These are the how-to-install notes of self-hosted apps I personally using or hav
 
 # Self-hosted compose
 
-1. [System](/doc/system-3POGsgtV3j)
-1. [Administration](/doc/administration-loPn4JnMkK)
-1. [Productivity](/doc/productivity-lokWeSQ7qE)
-1. [Entertainment](/doc/entertainment-xWNfwjbzO9)
-1. [Utility](/doc/utility-GggpWwOdMn)
-1. [Other](/doc/other-yoLbF1qLyy)
+**Linux TL;DR w/o Portainer**
+
+1. Copy the compose and .env you want to your working directory, just change the `container_name` part
+   ```bash
+   wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/container_name/docker-compose.yml
+   ```
+   ```bash
+   wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/container_name/.env
+   ```
+2. Edit the files as necessary
+   ```bash
+   sudo nano docker-compose.yml
+   ```
+   ```bash
+   sudo nano .env
+   ```
+3. Deploy the container
+   ```bash
+   sudo docker compose up -d
+   ```
+
+
+1. [System](/docs/system/system.md)
+2. [Administration](/docs/administration/administration.md)
+3. [Productivity](/docs/productivity/productivity.md)
+4. [Entertainment](/docs/entertainment/entertainment.md)
+5. [Utility](/docs/utility/utility.md)
+6. [Other](/docs/other/other.md)
 
 
 # Useful Docker configuration

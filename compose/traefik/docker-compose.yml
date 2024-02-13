@@ -1,0 +1,27 @@
+version: '3'
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:v2.10
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${TRAEFIK_DYNCONFIG_PATH}:/config
+      - ${TRAEFIK_CONFIG_FILE}:/traefik.yml
+      - ${TRAEFIK_CERTIFICATE_PATH}:/letsencrypt
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_DOMAIN}`)
+      - traefik.http.services.traefik.loadbalancer.server.port=8080
+      - traefik.http.routers.traefik.service=api@internal
+      - traefik.http.routers.traefik.tls=true
+      - traefik.http.routers.traefik.tls.certresolver=myresolver
+
+# edit them if you used different setting but the container you are planning to use Traefik with needs to be in the same network
+networks:
+  default:
+    name: proxy.bridge
+    external: true
