@@ -43,7 +43,7 @@ These are the how-to-install notes of self-hosted apps I personally using or hav
    sudo docker compose up -d
    ```
 
-
+---
 
 1. [System](/docs/system/system.md)
 2. [Administration](/docs/administration/administration.md)

@@ -2,7 +2,6 @@
 
 Portainer Community Edition is a lightweight service delivery platform for containerized applications that can be used to manage Docker, Swarm, Kubernetes and ACI environments. It is designed to be as simple to deploy as it is to use.[^1]
 
-
 # Version used in this documentation
 
 > There can be slight differences on installation processes if you are on different versions or hardware
@@ -15,7 +14,6 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 | Synology Docker | 20.10.3-1308 |
 | Docker Compose | 1.29.2 |
 | Portainer | 2.1.61 |
-
 
 # Prerequisites
 * [Docker](docker.md)
@@ -31,7 +29,6 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 | **Port 9443 map** | 10001 |
 | **Port 9000 map** | 10000 |
 | **Container image** | portainer/portainer-ce |
-
 
 # How to install Portainer
 
@@ -70,18 +67,15 @@ Portainer Community Edition is a lightweight service delivery platform for conta
    sudo docker compose up -d
    ```
 
-
 ## On Linux server (harder)
 
 ### Prepare the directory and docker compose file
-
 
 1. Prepare config directory for `Portainer`
 
    ```bash
    sudo mkdir -p /volume1/docker/portainer
    ```
-
 
 2. Create `docker-compose.yml` file
 
@@ -115,13 +109,11 @@ Portainer Community Edition is a lightweight service delivery platform for conta
        external: true
    ```
 
-
 4. Save the file, after that go to where it is
 
    ```bash
    cd /volume1/docker/portainer
    ```
-
 
 5. Install `Portainer` using `Docker Compose`
 
@@ -129,13 +121,11 @@ Portainer Community Edition is a lightweight service delivery platform for conta
    sudo docker-compose up
    ```
 
-
 6. If you have no reverse proxy setup for `Portainer`, you need to open up the port to access `Portainer`
 
    ```bash
    sudo ufw allow 10000
    ```
-
 
 ## On Synology NAS
 
@@ -143,20 +133,17 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 
 > In my opinion, installing a container using Synology Docker Wizard is **less recommended**. You may want to try installing your first container using CLI instead as it is more versatile, and it will teach you to configure your containers better. Check how to do it [below](#using-synology-cli)
 
-
 #### Prepare the directory
 
 1. Create `/volume1/docker/portainer` directory.
 
 > The `docker` part is a shared directory, go to the `Control Panel` to create it then create `portainer` directory inside `docker` shared directory
 
-
 #### Download Portainer image
 
 1. Open up `Docker` application, go to the `Registry` tab, then search for `portainer`
 2. Double click on the image named `portainer/portainer-ce` make sure the tag is `latest` then hit `Select`
 3. Go to the `Image` tab and wait a couple minutes for the image to download, when it is done the burger icon should be all blue
-
 
 #### Deploy Portainer
 
@@ -171,7 +158,6 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 6. Click `Add Folder` then pick the directory you created before i.e. `/docker/10000-portainer`
 7. Fill `Mount Path` with `/data` then click `Next`
 8. Make sure `Run this container after the wizard is finished` is checked, then click `Done`
-
 
 ### Using Synology CLI
 
@@ -197,14 +183,12 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 6. Save everything then right click the task and clik `Run`
 7. Wait a couple minutes for the container to install. If you do not receive an error email then `portainer` will show in Synology Docker's `Container` tab
 
-
 ## How to configure Portainer
 
 1. Enter your machine/Synology IP with `Portainer` port in your browser to open its web app i.e. `http://192.168.1.1:10000`
 2. Under `New Portainer Installation`, fill up your credentials then click `Create user`
 3. Click `Get Started` then just click `local`
 4. `Portainer` is ready to use
-
 
 ## How to update Portainer
 
@@ -234,7 +218,6 @@ Portainer Community Edition is a lightweight service delivery platform for conta
    sudo docker-compose up
    ```
 
-
 ### On Synology NAS
 
 #### If you used Synology Docker Wizard
@@ -245,7 +228,6 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 4. `Right click` on `Portainer` again, pick `Action` then `Delete`
 5. Do all the steps [here](#deploy-portainer) again
 
-
 #### If you used Synology CLI
 
 1. Open `Docker` application
@@ -253,6 +235,5 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 3. `Right click` on `Portainer`, pick `Action` then `Stop`
 4. `Right click` on `Portainer` again, pick `Action` then `Delete`
 5. Do all the steps [here](#using-synology-cli) again
-
 
 [^1]: https://github.com/portainer/portainer
