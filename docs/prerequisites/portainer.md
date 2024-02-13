@@ -143,7 +143,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 
 ### Using Synology Docker Wizard
 
-> In my opinion, installing a container using Synology Docker Wizard is **less recommended**. You may want to try installing your first container using CLI instead as it is more versatile, and it will teach you to configure your containers better. Check how to do it [below](#h-using-synology-cli)
+> In my opinion, installing a container using Synology Docker Wizard is **less recommended**. You may want to try installing your first container using CLI instead as it is more versatile, and it will teach you to configure your containers better. Check how to do it [below](#using-synology-cli)
 
 
 #### Prepare the directory
@@ -245,7 +245,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 2. Go to the `Container` tab
 3. `Right click` on `Portainer`, pick `Action` then `Stop`
 4. `Right click` on `Portainer` again, pick `Action` then `Delete`
-5. Do all the steps [here](#h-deploy-portainer) again
+5. Do all the steps [here](#deploy-portainer) again
 
 
 #### If you used Synology CLI
@@ -254,7 +254,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 2. Go to the `Container` tab
 3. `Right click` on `Portainer`, pick `Action` then `Stop`
 4. `Right click` on `Portainer` again, pick `Action` then `Delete`
-5. Do all the steps [here](#h-using-synology-cli) again
+5. Do all the steps [here](#using-synology-cli) again
 
 
 [^1]: https://github.com/portainer/portainer
