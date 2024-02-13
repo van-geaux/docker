@@ -4,18 +4,9 @@ Self-hosting is the practice of running and maintaining a website or service usi
 
 These are the how-to-install notes of self-hosted apps I personally using or have used.
 
+>You can use these on any system you can install `Docker` on, be it on Unix-based or Windows machine
 
-:::info
-You can use these on any system you can install `Docker` on, be it on Unix-based or Windows machine
-
-:::
-
-
-:::info
-The majority of the apps are installed using `Docker Compose` format inside `Portainer`
-
-:::
-
+>The majority of the apps are installed using `Docker Compose` format inside `Portainer`
 
 >PIRACY DISCLAIMER
 >
