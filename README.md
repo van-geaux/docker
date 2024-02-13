@@ -16,8 +16,8 @@ These are the how-to-install notes of self-hosted apps I personally using or hav
 
 # Prerequisites
 
-1. [Install Docker](docs/prerequisites/install-docker.md)
-2. [Install Portainer](docs/prerequisites/install-portainer.md)
+1. [Install Docker](docs/prerequisites/docker.md)
+2. [Install Portainer](docs/prerequisites/portainer.md)
 
 
 # Self-hosted compose
