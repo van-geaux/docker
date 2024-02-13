@@ -17,12 +17,9 @@ The majority of the apps are installed using `Docker Compose` format inside `Por
 :::
 
 
-:::warning
-PIRACY DISCLAIMER
-
-It's crucial to understand that while my notes *can* theoretically be used with pirated media, I do **not** endorse or support piracy.
-
-:::
+>PIRACY DISCLAIMER
+>
+>It's crucial to understand that while my notes *can* theoretically be used with pirated media, I do **not** endorse or support piracy.
 
 # Self-hosted compose
 
