@@ -4,13 +4,13 @@ Self-hosting is the practice of running and maintaining a website or service usi
 
 These are the how-to-install notes of self-hosted apps I personally using or have used.
 
->You can use these on any system you can install `Docker` on, be it on Unix-based or Windows machine
+> You can use these on any system you can install `Docker` on, be it on Unix-based or Windows machine
 
->The majority of the apps are installed using `Docker Compose` format inside `Portainer`
+> The majority of the apps are installed using `Docker Compose` format inside `Portainer`
 
->PIRACY DISCLAIMER
->
->It's crucial to understand that while my notes *can* theoretically be used with pirated media, I do **not** endorse or support piracy.
+> PIRACY DISCLAIMER
+> 
+> It's crucial to understand that while my notes *can* theoretically be used with pirated media, I do **not** endorse or support piracy.
 
 # Self-hosted compose
 
