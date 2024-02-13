@@ -37,7 +37,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
 
 > This tutorial assume that you know the most basic of unix commands and server setup
 
-## On Linux server(easy)
+## On Linux server (easy)
 
 1. Prepare config directory for `Portainer`
 
@@ -71,7 +71,7 @@ Portainer Community Edition is a lightweight service delivery platform for conta
    ```
 
 
-## On Linux server(harder)
+## On Linux server (harder)
 
 ### Prepare the directory and docker compose file
 

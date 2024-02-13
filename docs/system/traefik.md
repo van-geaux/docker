@@ -43,8 +43,11 @@ traefik
 
 # How to install Traefik
 
-**Linux TL;DR w/o Portainer**
-1. **In your traefik directory**, copy the compose, .env, and config file
+## Linux TL;DR w/o Portainer
+
+> Please [click here](#prepare-the-directories) to skip Linux TL;DR and read the detailed guide instead
+
+1. **In your traefik working directory**, copy the compose, .env, and config file
    ```bash
    wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/trefik/docker-compose.yml && wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/.env && wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/traefik.yml
    ```
