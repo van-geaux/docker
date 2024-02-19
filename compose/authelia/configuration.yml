@@ -1,0 +1,75 @@
+---
+###############################################################
+#                   Authelia configuration                    #
+###############################################################
+
+jwt_secret: 17X91RxaXM4vWkqYr5tItxtss #<<< you need to change that
+default_redirection_url: https://auth.domain.tld #<<< you need to change that
+
+server:
+  host: 0.0.0.0
+  port: ${AUTHELIA_PORT}
+   
+log:
+  level: debug
+   
+totp:
+  issuer: ${TOP_DOMAIN}
+   
+# duo_api:
+#  hostname: api-123456789.domain.tld
+#  integration_key: ABCDEF
+#  # This secret can also be set using the env variables AUTHELIA_DUO_API_SECRET_KEY_FILE
+#  secret_key: 1234567890abcdefghifjkl
+   
+authentication_backend:
+  file:
+    path: /config/users_database.yml #<<< you can change that
+   
+access_control:
+  default_policy: deny
+  rules:
+    # Rules applied to everyone
+    - domain: auth.domain.tld #<<< you need to change that
+      policy: bypass
+    - domain:
+      - app1.domain.tld #<<< you can change that
+      - app2.domain.tld #<<< you can change that
+      policy: one_factor
+    - domain: 
+      - app3.domain.tld #<<< you can change that
+      - app4.domain.tld #<<< you can change that
+      policy: two_factor
+   
+session:
+  name: authelia_session
+  secret: unsecure_session_secret
+  expiration: 3600  #<<< you can change that
+  inactivity: 3600  #<<< you can change that
+  domain: domain.tld  #<<< you can change that
+   
+  redis:
+    host: redis #<<< you can change that
+    port: 6379
+   
+regulation:
+  max_retries: 3 #<<< you can change that
+  find_time: 120 #<<< you can change that
+  ban_time: 300 #<<< you can change that
+   
+storage:
+  encryption_key: ZMsm2yBGuRLPr311rvg9E5zXV #<<< you need to change that
+  local:
+    path: /config/db.sqlite3
+   
+notifier:
+  filesystem:
+    filename: /config/notification.txt
+  #smtp:
+  #  username: test
+    # This secret can also be set using the env variables AUTHELIA_NOTIFIER_SMTP_PASSWORD_FILE
+  #  password: password
+  #  host: mail.domain.tld
+  #  port: 25
+  #  sender: admin@domain.tld
+...

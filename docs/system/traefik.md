@@ -23,11 +23,11 @@ Traefik is a leading modern reverse proxy and load balancer that makes deploying
 
 # Prerequisites
 
-* [Docker](/docs/prerequisites/docker.md)
-* [Portainer](/docs/prerequisites/portainer.md)
+* [Docker](../prerequisites/docker.md)
+* [Portainer](../prerequisites/portainer.md)
 
 > This documentation used `Portainer` to install `Traefik` on `Linux` and `Synology`
-traefik
+
 # Environments in the examples
 
 > Check these if you are not sure which environments you can safely change
@@ -49,9 +49,14 @@ traefik
 
 1. **In your traefik working directory**, copy the compose, .env, and config file
    ```bash
-   wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/trefik/docker-compose.yml && wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/.env && wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/traefik.yml
+   wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/docker-compose.yml && wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/.env && wget https://raw.githubusercontent.com/van-geaux/docker/main/compose/traefik/traefik.yml
    ```
-2. Edit the files as necessary
+2. **In your traefik working directory**, create the `config` and `letsencrypt` directory
+   ```bash
+   sudo mkdir -p /{config,letsencrypt}
+   ```
+
+3. Edit the files as necessary
    ```bash
    sudo nano docker-compose.yml
    ```
@@ -61,7 +66,7 @@ traefik
    ```bash
    sudo nano traefik.yml
    ```
-3. Deploy the container
+4. Deploy the container
    ```bash
    sudo docker compose up -d
    ```

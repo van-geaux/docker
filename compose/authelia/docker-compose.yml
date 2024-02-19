@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  authelia:
+    image: authelia/authelia
+    container_name: authelia # You can change that
+    volumes:
+      - ${CONFIG_PATH}:/config
+    ports:
+      - ${AUTHELIA_PORT}:${AUTHELIA_PORT} # Make sure it's the same with the one in the configuration.yml
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+    environment:
+      - TZ=Asia/Singapore # You can change that
+    depends_on:
+      - redis
+  redis:
+    image: redis:alpine
+    container_name: redis # You can change that
+    volumes:
+      - ${YOUR_REDIS_DATA_PATH}:/data
+    expose:
+      - 6379
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Singapore # You can change that
